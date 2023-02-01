@@ -35,7 +35,14 @@ class Dropdown {
     }
 
     close() {
-        this.$el.classList.remove('open')
+        // this.$el.classList.remove('open')
+        this.$el.classList.add('hide')
+        const el = this.$el
+        console.log(el)
+        setTimeout(function(){
+            el.classList.remove('open')
+            el.classList.remove('hide')
+        },300)
     }
 }
 
